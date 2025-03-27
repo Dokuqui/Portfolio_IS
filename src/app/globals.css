@@ -1,0 +1,91 @@
+@import "@fontsource/press-start-2p";
+@import "@fontsource/jetbrains-mono";
+
+@tailwind utilities;
+
+/* Define root-level CSS variables */
+:root {
+  --dark-bg: #0a0a0a;
+  --neon-green: #39ff14;
+  --neon-blue: #00ffff;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--white);
+}
+
+@layer utilities {
+  .bg-darkBg {
+    background-color: var(--dark-bg);
+  }
+
+  .text-neonGreen {
+    color: var(--neon-green);
+  }
+
+  .border-neonGreen {
+    color: var(--neon-green);
+  }
+
+  .border-neonBlue {
+    border-color: var(--neon-blue);
+  }
+}
+
+/* CRT Screen Effects */
+.crt-effect {
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.03) 50%,
+      rgba(0, 0, 0, 0.2) 50%
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 0.03),
+      rgba(0, 255, 0, 0.02),
+      rgba(0, 0, 255, 0.03)
+    );
+  background-size: 100% 4px, 4px 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0, 0, 0, 0.3) 51%,
+    transparent 51%
+  );
+  background-size: 100% 6px;
+  animation: scanline 8s linear infinite;
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Neon Effects */
+.shadow-neonGlow {
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.3), 0 0 30px rgba(57, 255, 20, 0.2),
+    0 0 45px rgba(57, 255, 20, 0.1);
+}
+
+/* Typing Animation */
+.react-type-animation {
+  display: inline-block;
+  border-right: 2px solid #39ff14;
+  padding-right: 4px;
+}
