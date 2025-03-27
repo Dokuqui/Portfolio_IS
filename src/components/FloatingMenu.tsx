@@ -1,33 +1,63 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import { Cpu, Atom, Code2, Mail, User, GraduationCap } from "lucide-react";
 
 const menuItems = [
-    { id: "about", label: "PROFILE", icon: <User size={18} /> },
-    { id: "skills", label: "SKILLSET", icon: <Cpu size={18} /> },
-    { id: "experience", label: "CAREER", icon: <Atom size={18} /> },
-    { id: "education", label: "Education", icon: <GraduationCap size={18} /> },
-    { id: "projects", label: "WORKS", icon: <Code2 size={18} /> },
-    { id: "contact", label: "COMS", icon: <Mail size={18} /> },
+    { id: "about", label: "PROFILE", icon: <User size={24} /> },
+    { id: "skills", label: "SKILLSET", icon: <Cpu size={24} /> },
+    { id: "experience", label: "CAREER", icon: <Atom size={24} /> },
+    { id: "education", label: "EDUCATION", icon: <GraduationCap size={24} /> },
+    { id: "projects", label: "PROJECTS", icon: <Code2 size={24} /> },
+    { id: "contact", label: "CONTACT", icon: <Mail size={24} /> },
 ];
 
 const FloatingMenu = () => {
     const [activeSection, setActiveSection] = useState("about");
     const [isHovered, setIsHovered] = useState(false);
 
+    const handleSetActive = (sectionId: string) => {
+        setActiveSection(sectionId);
+    };
+
+    const handleClick = (sectionId: string) => {
+        setActiveSection(sectionId);
+    };
+
+    // Custom scroll listener as a fallback
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY + 100; // Offset to account for padding/header
+
+            menuItems.forEach((item) => {
+                const section = document.getElementById(item.id);
+                if (section) {
+                    const sectionTop = section.offsetTop;
+                    const sectionBottom = sectionTop + section.offsetHeight;
+
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                        setActiveSection(item.id);
+                    }
+                }
+            });
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll); // Cleanup
+    }, []);
+
     return (
         <motion.nav
-            className="fixed top-1/2 right-6 -translate-y-1/2 z-50 group"
+            className="fixed top-1/2 right-8 -translate-y-1/2 z-50 group"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.2, delay: 0.5 }}
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
         >
-            <div className="relative bg-darkBg/80 backdrop-blur-sm p-2 rounded-xl border-2 border-neonGreen shadow-neonGlow">
-                <div className="absolute inset-0 rounded-xl border border-neonGreen/30 pointer-events-none"></div>
+            <div className="relative bg-darkBg/90 backdrop-blur-md p-6 rounded-xl border-2 border-neonGreen shadow-neonGlow">
+                <div className="absolute inset-0 rounded-xl border border-neonGreen/40 pointer-events-none crt-effect" />
 
                 {menuItems.map((item) => (
                     <ScrollLink
@@ -36,28 +66,34 @@ const FloatingMenu = () => {
                         smooth={true}
                         duration={600}
                         spy={true}
-                        onSetActive={(to) => setActiveSection(to)}
-                        className={`flex items-center gap-3 p-3 rounded-lg transition-all cursor-pointer
-                            ${activeSection === item.id
-                                ? "bg-neonGreen/20 text-neonGreen"
-                                : "text-gray-300 hover:bg-neonGreen/10"}
-                        `}
+                        offset={-100} // Adjust for padding/header
+                        spyThrottle={100} // Throttle scroll events for performance
+                        onSetActive={() => handleSetActive(item.id)}
+                        onClick={() => handleClick(item.id)}
+                        className={`flex items-center gap-4 p-4 mx-2 my-1 rounded-lg transition-all cursor-pointer font-mono
+              ${activeSection === item.id
+                                ? "bg-neonGreen/20 shadow-[0_0_8px_#39ff14]"
+                                : "hover:bg-neonGreen/10 hover:shadow-[0_0_5px_#39ff14]"
+                            }`}
                     >
                         <motion.div
                             animate={{
                                 color: activeSection === item.id ? "#39ff14" : "#4A5568",
-                                scale: activeSection === item.id ? 1.15 : 1
+                                scale: activeSection === item.id ? 1.2 : 1,
                             }}
+                            transition={{ duration: 0.2 }}
                         >
                             {item.icon}
                         </motion.div>
                         <motion.span
-                            className="text-sm font-medium tracking-wide"
+                            className="text-base font-medium tracking-wider"
                             animate={{
+                                color: activeSection === item.id ? "#39ff14" : "#4A5568",
                                 opacity: isHovered ? 1 : 0,
-                                x: isHovered ? 0 : 10,
-                                display: isHovered ? "inline-block" : "none"
+                                x: isHovered ? 0 : 15,
+                                display: isHovered ? "inline-block" : "none",
                             }}
+                            transition={{ duration: 0.2 }}
                         >
                             {item.label}
                         </motion.span>

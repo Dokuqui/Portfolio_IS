@@ -11,6 +11,11 @@ module.exports = {
         neonBlue: "var(--neon-blue)",
         white: "var(--white)",
       },
+      fontFamily: {
+        pixel: ["var(--font-pixel)"],
+        americana: ["var(--font-americana)"],
+        mono: ["var(--font-mono)"],
+      },
     },
   },
   plugins: [],
