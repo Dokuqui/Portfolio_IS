@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
-import { Cpu, Atom, Code2, User, GraduationCap, Joystick } from "lucide-react";
+import { Cpu, Atom, Code2, User, GraduationCap } from "lucide-react";
 
 const menuItems = [
     { id: "about", label: "PROFILE", icon: <User size={24} /> },

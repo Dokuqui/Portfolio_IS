@@ -56,14 +56,14 @@ const ProjectsSection = () => {
                     },
                 });
                 const filteredProjects = response.data
-                    .filter((repo: any) => desiredRepos.includes(repo.name))
-                    .map((repo: any) => ({
+                    .filter((repo: Project) => desiredRepos.includes(repo.name))
+                    .map((repo: Project) => ({
                         name: repo.name.replace(/-/g, " ").replace(/\b\w/g, (c: string) => c.toUpperCase()),
                         description: repo.description || "No description provided.",
-                        tech: repo.language ? [repo.language] : [],
-                        githubUrl: repo.html_url,
-                        stars: repo.stargazers_count,
-                        forks: repo.forks_count,
+                        tech: repo.tech ? [repo.tech] : [],
+                        githubUrl: repo.githubUrl,
+                        stars: repo.stars,
+                        forks: repo.forks,
                     }));
                 setProjects(filteredProjects);
             } catch (error) {
