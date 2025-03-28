@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
-import { Cpu, Atom, Code2, Mail, User, GraduationCap } from "lucide-react";
+import { Cpu, Atom, Code2, User, GraduationCap, Joystick } from "lucide-react";
 
 const menuItems = [
     { id: "about", label: "PROFILE", icon: <User size={24} /> },
@@ -10,11 +10,10 @@ const menuItems = [
     { id: "experience", label: "CAREER", icon: <Atom size={24} /> },
     { id: "education", label: "EDUCATION", icon: <GraduationCap size={24} /> },
     { id: "projects", label: "PROJECTS", icon: <Code2 size={24} /> },
-    { id: "contact", label: "CONTACT", icon: <Mail size={24} /> },
 ];
 
 const FloatingMenu = () => {
-    const [activeSection, setActiveSection] = useState("about");
+    const [activeSection, setActiveSection] = useState("");
     const [isHovered, setIsHovered] = useState(false);
 
     const handleSetActive = (sectionId: string) => {
@@ -25,15 +24,14 @@ const FloatingMenu = () => {
         setActiveSection(sectionId);
     };
 
-    // Custom scroll listener as a fallback
     useEffect(() => {
         const handleScroll = () => {
-            const scrollPosition = window.scrollY + 100; // Offset to account for padding/header
+            const scrollPosition = window.scrollY + 100;
 
             menuItems.forEach((item) => {
                 const section = document.getElementById(item.id);
                 if (section) {
-                    const sectionTop = section.offsetTop;
+                    const sectionTop = section.offsetTop - 100;
                     const sectionBottom = sectionTop + section.offsetHeight;
 
                     if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
@@ -44,12 +42,12 @@ const FloatingMenu = () => {
         };
 
         window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll); // Cleanup
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return (
         <motion.nav
-            className="fixed top-1/2 right-8 -translate-y-1/2 z-50 group"
+            className="fixed top-1/2 right-8 -translate-y-1/2 z-50 group font-mono"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.2, delay: 0.5 }}
@@ -66,12 +64,12 @@ const FloatingMenu = () => {
                         smooth={true}
                         duration={600}
                         spy={true}
-                        offset={-100} // Adjust for padding/header
-                        spyThrottle={100} // Throttle scroll events for performance
+                        offset={-120}
+                        spyThrottle={100}
                         onSetActive={() => handleSetActive(item.id)}
                         onClick={() => handleClick(item.id)}
-                        className={`flex items-center gap-4 p-4 mx-2 my-1 rounded-lg transition-all cursor-pointer font-mono
-              ${activeSection === item.id
+                        className={`flex items-center gap-4 p-4 mx-2 my-1 rounded-lg transition-all cursor-pointer
+                            ${activeSection === item.id
                                 ? "bg-neonGreen/20 shadow-[0_0_8px_#39ff14]"
                                 : "hover:bg-neonGreen/10 hover:shadow-[0_0_5px_#39ff14]"
                             }`}

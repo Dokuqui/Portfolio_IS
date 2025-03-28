@@ -6,14 +6,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        neonEmerald: "var(--neon-Emerald)",
         darkBg: "var(--dark-bg)",
         neonGreen: "var(--neon-green)",
         neonBlue: "var(--neon-blue)",
-        white: "var(--white)",
+        neonDarkBlue: "var(--neon-dark-blue)",
+        white: "var(--white-00)",
+        "brown-700": "#4A2C2A",
       },
       fontFamily: {
         pixel: ["var(--font-pixel)"],
-        americana: ["var(--font-americana)"],
         mono: ["var(--font-mono)"],
       },
     },

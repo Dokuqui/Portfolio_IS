@@ -1,4 +1,3 @@
-"use client";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -56,28 +55,26 @@ const TerminalIntro = ({ onTerminalExit }: { onTerminalExit: () => void }) => {
         <AnimatePresence>
             {isTerminalVisible && (
                 <motion.div
-                    className="fixed inset-0 bg-black/95 flex items-center justify-center font-mono z-50 crt-effect"
+                    className="top-0 left-0 right-0 bottom-0 flex items-center justify-center z-50 bg-black/80 font-mono"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 1.5 }}
                 >
-                    <div className="w-[40vw] max-w-2xl h-[70vh] relative">
-                        <div className="terminal-window border-2 border-neonGreen rounded-lg shadow-neonGlow bg-darkBg/90 p-6">
-                            {/* Header */}
+                    <div className="w-[600px] h-[400px] relative crt-effect">
+                        <div className="terminal-window border-2 border-neonGreen rounded-sm shadow-neonGlow bg-darkBg/90 p-4 flex flex-col w-full h-full">
                             <div className="terminal-header bg-darkBg p-2 border-b border-neonGreen flex items-center">
-                                <div className="flex space-x-2">
-                                    <div className="h-3 w-3 rounded-full bg-red-500"></div>
-                                    <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
-                                    <div className="h-3 w-3 rounded-full bg-green-500"></div>
+                                <div className="flex space-x-1">
+                                    <div className="h-2 w-2 rounded-full bg-red-500"></div>
+                                    <div className="h-2 w-2 rounded-full bg-yellow-500"></div>
+                                    <div className="h-2 w-2 rounded-full bg-green-500"></div>
                                 </div>
-                                <span className="text-neonGreen text-sm ml-2 font-pixel uppercase">
+                                <span className="text-neonGreen text-xs ml-2 uppercase tracking-wider">
                                     SYSTEM TERMINAL
                                 </span>
                             </div>
 
-                            {/* Body */}
-                            <div className="terminal-body p-4 h-[60vh] overflow-y-auto overflow-x-hidden">
+                            <div className="terminal-body p-3 flex-1 overflow-y-auto overflow-x-hidden">
                                 <AnimatePresence>
                                     {logs.map((log, index) => (
                                         <motion.div
@@ -85,7 +82,7 @@ const TerminalIntro = ({ onTerminalExit }: { onTerminalExit: () => void }) => {
                                             initial={{ opacity: 0, x: -20 }}
                                             animate={{ opacity: 1, x: 0 }}
                                             exit={{ opacity: 0 }}
-                                            className="text-neonGreen text-sm mb-2"
+                                            className="text-neonGreen text-xs mb-1 tracking-wide"
                                         >
                                             <span className="text-neonBlue mr-2">{">"}</span>
                                             {log}
@@ -96,18 +93,18 @@ const TerminalIntro = ({ onTerminalExit }: { onTerminalExit: () => void }) => {
                                 {showInput && (
                                     <form
                                         onSubmit={handleSubmit}
-                                        className="mt-4 flex items-center"
+                                        className="mt-3 flex items-center"
                                     >
                                         <span className="text-neonBlue mr-2">{">>"}</span>
                                         <input
                                             type="text"
                                             value={userInput}
                                             onChange={(e) => setUserInput(e.target.value.toUpperCase())}
-                                            className="bg-transparent border-none outline-none text-neonGreen w-full caret-neonBlue placeholder-neonGreen/50"
+                                            className="bg-transparent border-none outline-none text-neonGreen w-full caret-neonBlue placeholder-neonGreen/50 text-xs tracking-wide"
                                             placeholder="ENTER COMMAND..."
                                             autoFocus
                                         />
-                                        <div className="ml-2 w-3 h-5 bg-neonGreen animate-[blink_1s_infinite]"></div>
+                                        <div className="ml-1 w-2 h-4 bg-neonGreen animate-[blink_0.8s_infinite]"></div>
                                     </form>
                                 )}
                             </div>
