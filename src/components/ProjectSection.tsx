@@ -7,10 +7,10 @@ import { staticProjects } from "@/data/project";
 export interface Project {
     name: string;
     description: string;
-    tech: string[];
-    githubUrl: string;
-    stars?: number;
-    forks?: number;
+    language: string[];
+    html_url: string;
+    stargazers_count?: number;
+    forks_count?: number;
 }
 
 const techIcons: { [key: string]: string } = {
@@ -60,10 +60,10 @@ const ProjectsSection = () => {
                     .map((repo: Project) => ({
                         name: repo.name.replace(/-/g, " ").replace(/\b\w/g, (c: string) => c.toUpperCase()),
                         description: repo.description || "No description provided.",
-                        tech: repo.tech ? [repo.tech] : [],
-                        githubUrl: repo.githubUrl,
-                        stars: repo.stars,
-                        forks: repo.forks,
+                        language: repo.language ? [repo.language] : [],
+                        html_url: repo.html_url,
+                        stargazers_count: repo.stargazers_count,
+                        forks_count: repo.forks_count,
                     }));
                 setProjects(filteredProjects);
             } catch (error) {
@@ -124,7 +124,7 @@ const ProjectsSection = () => {
                                     {project.description}
                                 </p>
                                 <div className="flex flex-wrap justify-center gap-2 mt-2">
-                                    {project.tech.map((t, i) => (
+                                    {project.language.map((t, i) => (
                                         <motion.div
                                             key={i}
                                             initial={{ scale: 0 }}
@@ -136,18 +136,18 @@ const ProjectsSection = () => {
                                         </motion.div>
                                     ))}
                                 </div>
-                                {(project.stars! > 0 || project.forks! > 0) && (
+                                {(project.stargazers_count! > 0 || project.forks_count! > 0) && (
                                     <div className="flex justify-center gap-4 mt-2">
-                                        {project.stars! > 0 && (
-                                            <span className="font-mono text-neonBlue text-xs">★ {project.stars}</span>
+                                        {project.stargazers_count! > 0 && (
+                                            <span className="font-mono text-neonBlue text-xs">★ {project.stargazers_count}</span>
                                         )}
-                                        {project.forks! > 0 && (
-                                            <span className="font-mono text-neonBlue text-xs">⑂ {project.forks}</span>
+                                        {project.forks_count! > 0 && (
+                                            <span className="font-mono text-neonBlue text-xs">⑂ {project.forks_count}</span>
                                         )}
                                     </div>
                                 )}
                                 <a
-                                    href={project.githubUrl}
+                                    href={project.html_url}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="font-mono text-neonBlue text-sm text-center mt-4 block hover:underline hover:text-neonGreen transition-colors"
