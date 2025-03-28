@@ -54,7 +54,7 @@ const FloatingMenu = () => {
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
         >
-            <div className="relative bg-darkBg/90 backdrop-blur-md p-6 rounded-xl border-2 border-neonGreen shadow-neonGlow">
+            <div className="relative bg-darkBg/90 backdrop-blur-md p-6 rounded-xl border-2 border-neonGreen">
                 <div className="absolute inset-0 rounded-xl border border-neonGreen/40 pointer-events-none crt-effect" />
 
                 {menuItems.map((item) => (
@@ -70,8 +70,8 @@ const FloatingMenu = () => {
                         onClick={() => handleClick(item.id)}
                         className={`flex items-center gap-4 p-4 mx-2 my-1 rounded-lg transition-all cursor-pointer
                             ${activeSection === item.id
-                                ? "bg-neonGreen/20 shadow-[0_0_8px_#39ff14]"
-                                : "hover:bg-neonGreen/10 hover:shadow-[0_0_5px_#39ff14]"
+                                ? "bg-neonGreen/20 shadow-[0_0_3px_#39ff14]"
+                                : "hover:bg-neonGreen/10 hover:shadow-[0_0_1px_#39ff14]"
                             }`}
                     >
                         <motion.div

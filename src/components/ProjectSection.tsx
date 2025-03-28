@@ -96,7 +96,7 @@ const ProjectsSection = () => {
                     />
                 ))}
             </div>
-            <h2 className="text-4xl font-pixel text-neonGreen mb-12 relative z-10 tracking-widest uppercase shadow-[0_0_10px_#33ff00] text-center">
+            <h2 className="text-4xl font-pixel text-neonGreen mb-12 relative z-10 tracking-widest uppercase shadow-[0_0_5px_#33ff00] text-center">
                 {"> PROJECTS_"}
             </h2>
             <div className="max-w-5xl mx-auto relative z-10 px-4">
@@ -104,16 +104,16 @@ const ProjectsSection = () => {
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
-                            className="relative bg-darkBg/90 border-2 border-neonGreen/40 rounded-lg shadow-neonGlow group overflow-hidden flex flex-col"
+                            className="relative bg-darkBg/90 border-2 rounded-lg group overflow-hidden flex flex-col"
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.2, type: "spring" }}
-                            whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(51, 255, 0, 0.8)", transition: { duration: 0.3 } }}
+                            whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
                         >
                             <div className="p-4 flex flex-col flex-grow relative">
                                 <div className="absolute inset-0 crt-effect pointer-events-none z-20" />
-                                <h3 className="font-pixel text-neonGreen text-xl uppercase tracking-wider shadow-[0_0_8px_#33ff00] text-center mb-2">
+                                <h3 className="font-pixel text-neonGreen text-xl uppercase tracking-wider shadow-[0_0_2px_#33ff00] text-center mb-2">
                                     {project.name.split("").map((char, i) => (
                                         <motion.span key={i} custom={i} initial="hidden" whileInView="visible" variants={typewriterVariants}>
                                             {char}
@@ -132,7 +132,7 @@ const ProjectsSection = () => {
                                             whileHover={{ scale: 1.2, rotate: 10 }}
                                             transition={{ duration: 0.3, delay: i * 0.1 }}
                                         >
-                                            <Icon icon={techIcons[t] || "mdi:code"} width={20} height={20} className="text-neonGreen drop-shadow-[0_0_4px_#33ff00]" />
+                                            <Icon icon={techIcons[t] || "mdi:code"} width={20} height={20} className="text-neonGreen" />
                                         </motion.div>
                                     ))}
                                 </div>

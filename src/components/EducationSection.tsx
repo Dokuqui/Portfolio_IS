@@ -54,7 +54,7 @@ const EducationSection = () => {
             transition={{ duration: 0.8 }}
         >
             <div className="absolute inset-0 crt-effect scanline" />
-            <h2 className="text-4xl font-pixel text-neonGreen mb-12 relative z-10 tracking-widest uppercase shadow-[0_0_10px_#33ff00] text-center">
+            <h2 className="text-4xl font-pixel text-neonGreen mb-12 relative z-10 tracking-widest uppercase shadow-[0_0_5px_#33ff00] text-center">
                 {"> EDUCATION_"}
             </h2>
             <div className="max-w-4xl mx-auto relative z-10 px-4">
@@ -71,7 +71,7 @@ const EducationSection = () => {
                                     transition={{ duration: 0.8, delay: index * 0.3 }}
                                 />
                                 <motion.div
-                                    className="absolute top-8 w-5 h-5 bg-neonGreen rounded-full shadow-[0_0_10px_#33ff00] z-10"
+                                    className="absolute top-8 w-5 h-5 bg-neonGreen rounded-full z-10"
                                     style={{ left: "50%", transform: "translateX(-50%)" }}
                                     initial={{ scale: 0 }}
                                     whileInView={{ scale: 1, rotate: 360 }}
@@ -79,7 +79,7 @@ const EducationSection = () => {
                                     whileHover={{ scale: 1.5, transition: { duration: 0.3 } }}
                                 />
                                 <motion.div
-                                    className={`w-1/2 p-4 bg-darkBg/90 rounded-xl border-2 border-neonGreen/40 shadow-neonGlow hover:bg-neonGreen/10 transition-all duration-300 group relative ${index % 2 === 0 ? "ml-[calc(25%+2rem)]" : "mr-[calc(25%+2rem)]"}`}
+                                    className={`w-1/2 p-4 bg-darkBg/90 rounded-xl border-2 border-neonGreen/40 hover:bg-neonGreen/10 transition-all duration-300 group relative ${index % 2 === 0 ? "ml-[calc(25%+2rem)]" : "mr-[calc(25%+2rem)]"}`}
                                     initial={{ opacity: 0, scale: 0.8 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     viewport={{ once: true }}
@@ -87,7 +87,7 @@ const EducationSection = () => {
                                     whileHover={{ x: index % 2 === 0 ? 5 : -5, transition: { duration: 0.3 } }}
                                 >
                                     <div className="absolute inset-0 crt-effect pointer-events-none" />
-                                    <h3 className="font-pixel text-neonGreen text-lg uppercase tracking-wider shadow-[0_0_8px_#33ff00] text-center mb-2">
+                                    <h3 className="font-pixel text-neonGreen text-lg uppercase tracking-wider text-center mb-2">
                                         {edu.degree}
                                     </h3>
                                     <p className="font-mono text-gray-200 text-sm text-center mb-2">
@@ -109,7 +109,7 @@ const EducationSection = () => {
                                                     whileHover={{ scale: 1.2, rotate: 10 }}
                                                     transition={{ duration: 0.3, delay: i * 0.1 }}
                                                 >
-                                                    <Icon icon={techIcons[t]} width={24} height={24} className="text-neonGreen drop-shadow-[0_0_4px_#33ff00]" />
+                                                    <Icon icon={techIcons[t]} width={24} height={24} className="text-neonGreen" />
                                                 </motion.div>
                                             ))}
                                         </div>

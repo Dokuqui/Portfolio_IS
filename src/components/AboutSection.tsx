@@ -84,7 +84,7 @@ const AboutSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-b from-darkBg via-darkBg/80 to-neonGreen/10" />
                 <div className="absolute inset-0 crt-effect scanline" />
 
-                <h2 className="text-4xl font-pixel text-neonGreen mb-12 relative z-10 tracking-widest uppercase shadow-[0_0_10px_#33ff00] text-center">
+                <h2 className="text-4xl font-pixel text-neonGreen mb-12 relative z-10 tracking-widest uppercase shadow-[0_0_5px_#33ff00] text-center">
                     {content.heading}
                 </h2>
 

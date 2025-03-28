@@ -45,7 +45,7 @@ const CareerSection = () => {
             transition={{ duration: 0.8 }}
         >
             <div className="absolute inset-0 crt-effect scanline" />
-            <h2 className="text-4xl font-pixel text-neonGreen mb-8 relative z-10 tracking-widest uppercase shadow-[0_0_10px_#33ff00] text-center">
+            <h2 className="text-4xl font-pixel text-neonGreen mb-8 relative z-10 tracking-widest uppercase shadow-[0_0_5px_#33ff00] text-center">
                 {"> CAREER_"}
             </h2>
             <div className="max-w-3xl mx-auto relative z-10 px-4">
@@ -73,7 +73,7 @@ const CareerSection = () => {
                             transition={{ duration: 0.5, delay: index * 0.2, type: "spring", stiffness: 100 }}
                         >
                             <motion.div
-                                className="w-5/12 p-4 bg-darkBg/90 rounded-xl border-2 border-neonGreen/40 shadow-neonGlow hover:bg-neonGreen/10 transition-all duration-300 group relative"
+                                className="w-5/12 p-4 bg-darkBg/90 rounded-xl border-2 border-neonGreen/40 hover:bg-neonGreen/10 transition-all duration-300 group relative"
                                 whileHover={{
                                     x: [0, -2, 2, -2, 0],
                                     y: [0, 2, -2, 0, 0],
@@ -81,7 +81,7 @@ const CareerSection = () => {
                                 }}
                             >
                                 <div className="absolute inset-0 crt-effect pointer-events-none" />
-                                <h3 className="font-pixel text-neonGreen text-xl uppercase tracking-wider shadow-[0_0_8px_#33ff00] text-center mb-2">
+                                <h3 className="font-pixel text-neonGreen text-xl uppercase tracking-wider shadow-[0_0_3px_#33ff00] text-center mb-2">
                                     {milestone.title.split("").map((char, i) => (
                                         <motion.span key={i} custom={i} initial="hidden" whileInView="visible" variants={typewriterVariants}>
                                             {char}
@@ -114,7 +114,7 @@ const CareerSection = () => {
                                                     icon={techIcons[tech] || "mdi:code"}
                                                     width={24}
                                                     height={24}
-                                                    className="text-neonGreen drop-shadow-[0_0_4px_#33ff00]"
+                                                    className="text-neonGreen"
                                                 />
                                             </motion.div>
                                         ))}
@@ -143,7 +143,7 @@ const CareerSection = () => {
                             </div>
                             <div className="w-5/12 text-center">
                                 <motion.span
-                                    className="font-pixel text-neonGreen text-sm tracking-wide shadow-[0_0_4px_#33ff00]"
+                                    className="font-pixel text-neonGreen text-sm tracking-wide"
                                     animate={{ opacity: [1, 0.9, 1] }}
                                     transition={{ duration: 0.2, repeat: Infinity, repeatDelay: 2 }}
                                 >
