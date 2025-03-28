@@ -62,7 +62,7 @@ const TerminalIntro = ({ onTerminalExit }: { onTerminalExit: () => void }) => {
                     transition={{ duration: 1.5 }}
                 >
                     <div className="w-[600px] h-[400px] relative crt-effect">
-                        <div className="terminal-window border-2 border-neonGreen rounded-sm shadow-neonGlow bg-darkBg/90 p-4 flex flex-col w-full h-full">
+                        <div className="terminal-window border-2 border-neonGreen rounded-sm bg-darkBg/90 p-4 flex flex-col w-full h-full">
                             <div className="terminal-header bg-darkBg p-2 border-b border-neonGreen flex items-center">
                                 <div className="flex space-x-1">
                                     <div className="h-2 w-2 rounded-full bg-red-500"></div>
