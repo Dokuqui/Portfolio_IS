@@ -9,6 +9,7 @@ export interface Project {
     description: string;
     language: string[];
     html_url: string;
+    homepage?: string;
     stargazers_count?: number;
     forks_count?: number;
 }
@@ -62,6 +63,7 @@ const ProjectsSection = () => {
                         description: repo.description || "No description provided.",
                         language: repo.language ? [repo.language] : [],
                         html_url: repo.html_url,
+                        homepage: repo.homepage,
                         stargazers_count: repo.stargazers_count,
                         forks_count: repo.forks_count,
                     }));
@@ -145,6 +147,16 @@ const ProjectsSection = () => {
                                             <span className="font-mono text-neonBlue text-xs">⑂ {project.forks_count}</span>
                                         )}
                                     </div>
+                                )}
+                                {project.homepage && project.homepage !== "" && (
+                                    <a
+                                        href={project.homepage}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="font-mono text-neonBlue text-sm text-center hover:underline hover:text-neonGreen transition-colors"
+                                    >
+                                        [Project URL / Homepage]
+                                    </a>
                                 )}
                                 <a
                                     href={project.html_url}
