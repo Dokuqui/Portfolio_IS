@@ -13,6 +13,7 @@
     "@fontsource/jetbrains-mono": "^5.2.5",
     "@fontsource/press-start-2p": "^5.2.5",
     "@iconify/react": "^5.2.0",
+    "@vercel/analytics": "^1.5.0",
     "axios": "^1.8.4",
     "copy-to-clipboard": "^3.3.3",
     "framer-motion": "^12.5.0",
