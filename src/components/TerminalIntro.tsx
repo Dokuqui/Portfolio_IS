@@ -11,12 +11,6 @@ const TerminalIntro = ({ onTerminalExit }: { onTerminalExit: () => void }) => {
         "INITIALIZING SYSTEM...",
         "LOADING CORE MODULES...",
         "CHECKING SYSTEM INTEGRITY...",
-        "AWS EC2 ONLINE...",
-        "PYTHON API READY...",
-        "JAVA RUNTIME PREPARATION COMPLETE...",
-        "KUBERNETES CLUSTERS ACTIVE...",
-        "ACCESSING MAINFRAME...",
-        "INSTALLATION OF GO COMPLETE...",
         "WELCOME TO TERMINAL v1.9.5",
         "TYPE 'START' TO CONTINUE...",
     ];

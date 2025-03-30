@@ -7,9 +7,9 @@ import { Cpu, Atom, Code2, User, GraduationCap } from "lucide-react";
 const menuItems = [
     { id: "about", label: "PROFILE", icon: <User size={24} /> },
     { id: "skills", label: "SKILLSET", icon: <Cpu size={24} /> },
+    { id: "projects", label: "PROJECTS", icon: <Code2 size={24} /> },
     { id: "experience", label: "CAREER", icon: <Atom size={24} /> },
     { id: "education", label: "EDUCATION", icon: <GraduationCap size={24} /> },
-    { id: "projects", label: "PROJECTS", icon: <Code2 size={24} /> },
 ];
 
 const FloatingMenu = () => {

@@ -21,8 +21,8 @@ const AboutSection = () => {
         description: (
             <>
                 Je suis un développeur Full-Stack / Back-End passionné et dynamique, avec une solide expérience en Go (Golang), TypeScript, Python et C#. Fort d&apos;une expérience pratique en développement logiciel, DevOps et automatisation des tests, je me spécialise dans la création de solutions efficaces et évolutives.
-                Mon parcours m&apos;a conduit à travers diverses industries, de la logistique et la navigation à la cybersécurité et la technologie, où j&apos;ai affiné mon expertise en microservices, pipelines CI/CD et gestion de bases de données. Je suis particulièrement intéressé par la création d&apos;outils qui automatisent les flux de travail, renforcent la sécurité et améliorent la vie quotidienne.
-                Actuellement, je perfectionne mes compétences en Go, Rust, Docker/Kubernetes, C#, JAVA et développement cloud-native tout en travaillant sur des projets de pointe. Toujours avide d&apos;apprendre et de m&apos;adapter, j&apos;apprécie contribuer à des projets open-source, explorer de nouvelles technologies et repousser les limites de ce qui est possible en développement logiciel.
+                Mon parcours m&apos;a conduit à travers diverses industries, de la logistique et la navigation à la cybersécurité et la technologie, où j&apos;ai affiné mon expertise en microservices, pipelines CI/CD et gestion de bases de données.
+                Toujours avide d&apos;apprendre et de m&apos;adapter, j&apos;apprécie contribuer à des projets open-source, explorer de nouvelles technologies et repousser les limites de ce qui est possible en développement logiciel.
             </>
         ),        
         buttonText: "Connectons-nous et créons quelque chose d'incroyable ensemble !",
@@ -33,8 +33,8 @@ const AboutSection = () => {
         description: (
             <>
                 I am a passionate and dynamic Full-Stack / Back-End developer with solid experience in Go (Golang), TypeScript, Python, and C#. With practical experience in software development, DevOps, and test automation, I specialize in creating efficient and scalable solutions.
-                My journey has taken me through various industries, from logistics and navigation to cybersecurity and technology, where I honed my expertise in microservices, CI/CD pipelines, and database management. I am particularly interested in building tools that automate workflows, strengthen security, and improve daily life.
-                Currently, I&apos;m enhancing my skills in Go, Rust, Docker/Kubernetes, C#, JAVA, and cloud-native development while working on cutting-edge projects. Always eager to learn and adapt, I enjoy contributing to open-source projects, exploring new technologies, and pushing the boundaries of what&apos;s possible in software development.
+                My journey has taken me through various industries, from logistics and navigation to cybersecurity and technology, where I honed my expertise in microservices, CI/CD pipelines, and database management.
+                Always eager to learn and adapt, I enjoy contributing to open-source projects, exploring new technologies, and pushing the boundaries of what&apos;s possible in software development.
             </>
         ),
         buttonText: "Let's connect and build something amazing together!",

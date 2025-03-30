@@ -25,12 +25,6 @@ const SkillsSection = () => {
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
-                        whileHover={{
-                            scale: 1.05,
-                            x: [0, -2, 2, -2, 0],
-                            y: [0, 2, -2, 0, 0],
-                            transition: { duration: 0.3, times: [0, 0.2, 0.4, 0.6, 1], repeat: 1 }
-                        }}
                     >
                         <motion.div
                             className="flex flex-col items-center justify-center p-4 transition-all duration-300"

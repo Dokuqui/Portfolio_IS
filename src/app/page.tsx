@@ -26,9 +26,9 @@ export default function Home() {
             >
               <AboutSection />
               <SkillsSection />
+              <ProjectsSection />
               <CareerSection />
               <EducationSection />
-              <ProjectsSection />
             </div>
           </>
         )}
