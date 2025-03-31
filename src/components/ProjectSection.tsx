@@ -21,7 +21,7 @@ const techIcons: { [key: string]: string } = {
     Docker: "logos:docker-icon",
     Python: "logos:python",
     Django: "logos:django-icon",
-    Rust: "logos:rust",
+    Rust: "skill-icons:rust",
     "Semantic Release": "simple-icons:semanticrelease",
     Go: "logos:go",
     C: "logos:c",
