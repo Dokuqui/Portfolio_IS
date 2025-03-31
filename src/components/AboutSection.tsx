@@ -17,7 +17,7 @@ const AboutSection = () => {
 
 
     const content = language === 'fr' ? {
-        heading: "> ABOUT _",
+        heading: "> ABOUT_",
         description: (
             <>
                 Je suis un développeur Full-Stack / Back-End passionné et dynamique, avec une solide expérience en Go (Golang), TypeScript, Python et C#. Fort d&apos;une expérience pratique en développement logiciel, DevOps et automatisation des tests, je me spécialise dans la création de solutions efficaces et évolutives.
@@ -29,7 +29,7 @@ const AboutSection = () => {
         cvLink: "/documents/CV Semenov Illia Développeur, franç.pdf",
         cvFileName: "CV Semenov Illia Développeur, franç.pdf",
     } : {
-        heading: "> ABOUT _",
+        heading: "> ABOUT_",
         description: (
             <>
                 I am a passionate and dynamic Full-Stack / Back-End developer with solid experience in Go (Golang), TypeScript, Python, and C#. With practical experience in software development, DevOps, and test automation, I specialize in creating efficient and scalable solutions.
@@ -84,7 +84,7 @@ const AboutSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-b from-darkBg via-darkBg/80 to-neonGreen/10" />
                 <div className="absolute inset-0 crt-effect scanline" />
 
-                <h2 className="text-4xl font-pixel text-neonGreen mb-12 relative z-10 tracking-widest uppercase shadow-[0_0_5px_#33ff00] text-center">
+                <h2 className="text-4xl font-pixel text-neonGreen mb-12 relative z-10 tracking-widest uppercase shadow-[0_0_3px_#33ff00] text-center">
                     {content.heading}
                 </h2>
 

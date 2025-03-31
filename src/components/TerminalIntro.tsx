@@ -12,7 +12,7 @@ const TerminalIntro = ({ onTerminalExit }: { onTerminalExit: () => void }) => {
         "LOADING CORE MODULES...",
         "CHECKING SYSTEM INTEGRITY...",
         "WELCOME TO TERMINAL v1.9.5",
-        "TYPE 'START' TO CONTINUE...",
+        "TYPE *START* TO CONTINUE...",
     ];
 
     useEffect(() => {
@@ -27,8 +27,10 @@ const TerminalIntro = ({ onTerminalExit }: { onTerminalExit: () => void }) => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        if (userInput.trim().toLowerCase() === "start") {
-            setLogs((prev) => [...prev, `> ${userInput}`, "LAUNCHING INTERFACE..."]);
+        const trimmedInput = userInput.trim().toLowerCase();
+
+        if (trimmedInput === "start") {
+            setLogs((prev) => [...prev, "> START", "LAUNCHING INTERFACE..."]);
             setShowInput(false);
             setTimeout(() => {
                 setIsTerminalVisible(false);
@@ -39,7 +41,7 @@ const TerminalIntro = ({ onTerminalExit }: { onTerminalExit: () => void }) => {
                 ...prev,
                 `> ${userInput}`,
                 "ERROR: UNRECOGNIZED COMMAND",
-                "TRY: 'START' TO BEGIN",
+                "PLEASE TYPE *START* TO PROCEED",
             ]);
         }
         setUserInput("");
@@ -79,7 +81,16 @@ const TerminalIntro = ({ onTerminalExit }: { onTerminalExit: () => void }) => {
                                             className="text-neonGreen text-xs mb-1 tracking-wide"
                                         >
                                             <span className="text-neonBlue mr-2">{">"}</span>
-                                            {log}
+                                            {/* Only highlight when *START* is explicitly in the log */}
+                                            {log.includes("*START*") ? (
+                                                <>
+                                                    {log.split("*START*")[0]}
+                                                    <span className="font-bold text-neonBlue">START</span>
+                                                    {log.split("*START*")[1]}
+                                                </>
+                                            ) : (
+                                                log
+                                            )}
                                         </motion.div>
                                     ))}
                                 </AnimatePresence>
@@ -94,11 +105,11 @@ const TerminalIntro = ({ onTerminalExit }: { onTerminalExit: () => void }) => {
                                             type="text"
                                             value={userInput}
                                             onChange={(e) => setUserInput(e.target.value.toUpperCase())}
-                                            className="bg-transparent border-none outline-none text-neonGreen w-full caret-neonBlue placeholder-neonGreen/50 text-xs tracking-wide"
-                                            placeholder="ENTER COMMAND..."
+                                            className="bg-transparent border-none outline-none text-neonGreen w-full caret-neonBlue placeholder-neonGreen/70 text-xs tracking-wide font-bold"
+                                            placeholder="TYPE 'START' HERE..."
                                             autoFocus
                                         />
-                                        <div className="ml-1 w-2 h-4 bg-neonGreen animate-[blink_0.8s_infinite]"></div>
+                                        <div className="ml-1 w-3 h-5 bg-neonGreen animate-[blink_0.8s_infinite]" />
                                     </form>
                                 )}
                             </div>

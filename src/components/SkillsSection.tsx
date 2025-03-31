@@ -14,7 +14,7 @@ const SkillsSection = () => {
             transition={{ duration: 0.8 }}
         >
             <div className="absolute inset-0 crt-effect scanline" />
-            <h2 className="text-4xl font-pixel text-neonGreen mb-8 relative z-10 tracking-widest uppercase shadow-[0_0_5px_#33ff00] text-center">
+            <h2 className="text-4xl font-pixel text-neonGreen mb-8 relative z-10 tracking-widest uppercase shadow-[0_0_3px_#33ff00] text-center">
                 {"> SKILLSET_"}
             </h2>
             <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6 max-w-5xl mx-auto relative z-10 px-4">
