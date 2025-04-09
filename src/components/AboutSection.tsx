@@ -38,8 +38,8 @@ const AboutSection = () => {
             </>
         ),
         buttonText: "Let's connect and build something amazing together!",
-        cvLink: "/documents/CV_Semenov_Illia_Developer_english.pdf",
-        cvFileName: "CV_Semenov_Illia_Developer_english.pdf",
+        cvLink: "/documents/CV Semenov Illia Dev, english.pdf",
+        cvFileName: "CV Semenov Illia Dev, english.pdf",
     };
 
     const handleCopyEmail = () => {
