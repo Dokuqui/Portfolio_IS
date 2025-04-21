@@ -26,8 +26,8 @@ const AboutSection = () => {
             </>
         ),        
         buttonText: "Connectons-nous et créons quelque chose d'incroyable ensemble !",
-        cvLink: "/documents/CV Semenov Illia Développeur, franç.pdf",
-        cvFileName: "CV Semenov Illia Développeur, franç.pdf",
+        cvLink: "/documents/CV Semenov Illia Développeur fr.pdf",
+        cvFileName: "CV Semenov Illia Développeur fr.pdf",
     } : {
         heading: "> ABOUT_",
         description: (
@@ -38,8 +38,8 @@ const AboutSection = () => {
             </>
         ),
         buttonText: "Let's connect and build something amazing together!",
-        cvLink: "/documents/CV Semenov Illia Dev, english.pdf",
-        cvFileName: "CV Semenov Illia Dev, english.pdf",
+        cvLink: "/documents/CV Semenov Illia Dev en.pdf",
+        cvFileName: "CV Semenov Illia Dev en.pdf",
     };
 
     const handleCopyEmail = () => {
