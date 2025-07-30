@@ -1,0 +1,217 @@
+.aboutSection {
+    background: var(--background);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 60vh;
+    position: relative;
+}
+
+.themeToggle {
+    position: absolute;
+    top: 26px;
+    left: 32px;
+    display: flex;
+    align-items: center;
+    background: var(--surface);
+    border: 1.5px solid var(--primary);
+    border-radius: 22px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--primary);
+    box-shadow: 0 2px 12px rgba(16, 24, 39, 0.13);
+    transition: background 0.2s, color 0.2s;
+    z-index: 1;
+    gap: 7px;
+}
+
+.themeToggle:hover,
+.themeToggle:focus {
+    background: var(--primary);
+    color: #fff;
+}
+
+.themeToggleLabel {
+    font-size: 0.93em;
+    letter-spacing: 0.01em;
+    margin-left: 6px;
+    color: inherit;
+
+    @media (max-width: 700px) {
+        display: none;
+    }
+}
+
+.header {
+    width: 100%;
+    max-width: 620px;
+    margin: 74px auto 18px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 32px;
+    border-radius: var(--card-radius);
+    background: var(--surface);
+    box-shadow: 0 2px 16px rgba(16, 24, 39, 0.10);
+    position: relative;
+}
+
+.logo {
+    font-family: var(--font-mono);
+    font-size: 1.13rem;
+    color: var(--primary);
+    letter-spacing: 0.12em;
+}
+
+.languageSwitch {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--text-secondary);
+    font-size: 0.98rem;
+    font-family: var(--font-heading);
+    background: var(--background);
+    border-radius: 6px;
+    padding: 3px 10px;
+    border: 1.2px solid var(--border);
+    box-shadow: 0 1px 4px rgba(16, 24, 39, 0.07);
+}
+
+.languageSwitch button {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-family: var(--font-heading);
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 2px 7px;
+    border-radius: 5px;
+    transition: background 0.13s, color 0.13s;
+}
+
+.languageDivider {
+    font-size: 1.1em;
+    color: var(--border);
+    margin: 0 3px;
+}
+
+.activeLang {
+    background: var(--primary);
+    color: #bb8e4b !important;
+}
+
+.card {
+    padding: 38px 0;
+    width: 1400px;
+    margin-left: calc(50% - 50vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 350px;
+}
+
+.heading {
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+    text-align: center;
+    letter-spacing: 0.06em;
+}
+
+.description {
+    color: var(--text-main);
+    font-family: var(--font-mono);
+    font-size: 1.09rem;
+    margin-bottom: 22px;
+    text-align: center;
+    max-width: 1200px;
+}
+
+.socials {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 18px;
+    justify-content: center;
+}
+
+.socialIcon {
+    color: var(--secondary);
+    transition: transform 0.16s, color 0.16s;
+}
+
+.socialIcon:hover {
+    color: var(--primary);
+    transform: scale(1.14);
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.copyBtn,
+.downloadBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    font-family: var(--font-mono);
+    font-size: 1.01rem;
+    border-radius: 7px;
+    padding: 7px 14px;
+    cursor: pointer;
+    transition: background 0.12s, color 0.12s;
+}
+
+.copyBtn:hover,
+.downloadBtn:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+.downloadIcon {
+    margin-right: 4px;
+}
+
+.connectText {
+    margin-top: 10px;
+    color: var(--secondary);
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.07rem;
+}
+
+@media (max-width: 900px) {
+    .header {
+        padding: 13px 4vw;
+        max-width: 99vw;
+    }
+
+    .card {
+        padding: 18px 0;
+        min-height: 260px;
+    }
+
+    .aboutSection {
+        padding: 12px 0;
+    }
+
+    .description {
+        font-size: 1rem;
+        max-width: 98vw;
+    }
+
+    .themeToggle {
+        top: 12px;
+        left: 10px;
+        padding: 7px 10px;
+    }
+}
