@@ -3,6 +3,7 @@
 
 /* --- THEME VARIABLES --- */
 :root {
+  /* Classic Palette */
   --background: #f6f5f2;
   --surface: #fffdfa;
   --primary: #5e60ce;
@@ -13,21 +14,56 @@
   --text-secondary: #6e7a8a;
   --border: #e2e3ea;
   --card-radius: 18px;
-
   --font-heading: 'Montserrat', 'Segoe UI', Arial, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Mono', 'Consolas', monospace;
-
   --code-bg: #1a1731;
   --code-fg: #a8ffeb;
   --code-border: #35307e;
   --highlight: #fee3d5;
   --scrollbar: #ececf7;
   --scrollbar-thumb: #5e60ce;
-
   color-scheme: light dark;
   transition: background 0.25s, color 0.25s;
 }
 
+/* --- Palettes --- */
+[data-theme="nord"] {
+  --background: #eceff4;
+  --surface: #e5e9f0;
+  --primary: #5e81ac;
+  --primary-hover: #4c566a;
+  --secondary: #a3be8c;
+  --accent: #bf616a;
+  --text-main: #2e3440;
+  --text-secondary: #4c566a;
+  --border: #d8dee9;
+  --code-bg: #2e3440;
+  --code-fg: #8fbcbb;
+  --code-border: #81a1c1;
+  --highlight: #e5e9f0;
+  --scrollbar: #d8dee9;
+  --scrollbar-thumb: #5e81ac;
+}
+
+[data-theme="solarized"] {
+  --background: #fdf6e3;
+  --surface: #f5e9c9;
+  --primary: #268bd2;
+  --primary-hover: #005f87;
+  --secondary: #b58900;
+  --accent: #cb4b16;
+  --text-main: #073642;
+  --text-secondary: #657b83;
+  --border: #eee8d5;
+  --code-bg: #073642;
+  --code-fg: #93a1a1;
+  --code-border: #b58900;
+  --highlight: #eee8d5;
+  --scrollbar: #eee8d5;
+  --scrollbar-thumb: #268bd2;
+}
+
+/* Dark mode overrides for each palette (optional, you can expand these) */
 [data-theme="dark"] {
   --background: #191622;
   --surface: #232136;
@@ -47,7 +83,8 @@
 }
 
 /* --- BASE STYLES --- */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -60,7 +97,9 @@ html, body {
   transition: background 0.25s, color 0.25s;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -68,7 +107,12 @@ section {
   background: var(--background);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   color: var(--primary);
   margin-top: 10px;
@@ -81,15 +125,20 @@ h1 {
   font-size: 2.4rem;
   letter-spacing: 0.015em;
 }
+
 h2 {
   font-size: 1.85rem;
   letter-spacing: 0.012em;
 }
+
 h3 {
   font-size: 1.35rem;
   letter-spacing: 0.01em;
 }
-h4, h5, h6 {
+
+h4,
+h5,
+h6 {
   font-size: 1.1rem;
   font-weight: 700;
 }
@@ -100,13 +149,16 @@ a {
   transition: color 0.18s;
   font-weight: 600;
 }
-a:hover, a:focus {
+
+a:hover,
+a:focus {
   color: var(--secondary);
   text-decoration: underline wavy 1.5px;
   outline: none;
 }
 
-button, .button {
+button,
+.button {
   font-family: var(--font-mono);
   background: var(--primary);
   color: #fff;
@@ -119,14 +171,19 @@ button, .button {
   box-shadow: 0 2px 12px rgba(34, 96, 232, 0.06);
   transition: background 0.17s, box-shadow 0.18s, color 0.18s;
 }
-button:hover, .button:hover, button:focus {
+
+button:hover,
+.button:hover,
+button:focus {
   background: var(--primary-hover);
   color: #fff;
   outline: none;
   box-shadow: 0 4px 18px rgba(34, 96, 232, 0.14);
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
   font-family: var(--font-mono);
   border-radius: 7px;
   border: 1.5px solid var(--border);
@@ -139,17 +196,36 @@ input, textarea, select {
   box-shadow: none;
   transition: border 0.18s, box-shadow 0.18s;
 }
-input:focus, textarea:focus, select:focus {
+
+input:focus,
+textarea:focus,
+select:focus {
   border-color: var(--primary);
   box-shadow: 0 0 0 2px var(--primary-hover)22;
 }
 
-::-webkit-input-placeholder { color: var(--text-secondary); opacity: 1; }
-::-moz-placeholder { color: var(--text-secondary); opacity: 1; }
-:-ms-input-placeholder { color: var(--text-secondary); opacity: 1; }
-::placeholder { color: var(--text-secondary); opacity: 1; }
+::-webkit-input-placeholder {
+  color: var(--text-secondary);
+  opacity: 1;
+}
 
-pre, code {
+::-moz-placeholder {
+  color: var(--text-secondary);
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: var(--text-secondary);
+  opacity: 1;
+}
+
+::placeholder {
+  color: var(--text-secondary);
+  opacity: 1;
+}
+
+pre,
+code {
   font-family: var(--font-mono);
   background: var(--code-bg);
   color: var(--code-fg);
@@ -158,15 +234,17 @@ pre, code {
   border: 1px solid var(--code-border);
   font-size: 1em;
   line-height: 1.6;
-  box-shadow: 0 1px 4px rgba(16,24,39,0.07);
+  box-shadow: 0 1px 4px rgba(16, 24, 39, 0.07);
 }
+
 pre {
   overflow-x: auto;
   margin: 1.3em 0;
   padding: 1.1em 1.2em;
 }
 
-mark, .highlight {
+mark,
+.highlight {
   background: var(--highlight);
   color: var(--primary);
   padding: 0 0.2em;
@@ -185,18 +263,22 @@ hr {
   margin: 2.1em 0;
 }
 
-.card, .surface {
+.card,
+.surface {
   background: var(--surface);
   border-radius: var(--card-radius);
-  box-shadow: 0 2px 16px rgba(16,24,39,0.11);
+  box-shadow: 0 2px 16px rgba(16, 24, 39, 0.11);
   padding: 2.2em 2.5em;
   margin-bottom: 2.1em;
   border: 1.5px solid var(--border);
   transition: box-shadow 0.16s, border 0.16s;
 }
 
-.card:hover, .surface:hover, .card:focus, .surface:focus {
-  box-shadow: 0 6px 32px rgba(50,145,255,0.14), 0 1.5px 0 var(--primary);
+.card:hover,
+.surface:hover,
+.card:focus,
+.surface:focus {
+  box-shadow: 0 6px 32px rgba(50, 145, 255, 0.14), 0 1.5px 0 var(--primary);
   border: 1.5px solid var(--primary);
   z-index: 2;
 }
@@ -206,6 +288,7 @@ hr {
   width: 12px;
   background: var(--scrollbar);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--scrollbar-thumb);
   border-radius: 7px;
@@ -232,23 +315,30 @@ hr {
   font-family: var(--font-mono);
   font-weight: 700;
   color: var(--primary);
-  box-shadow: 0 2px 12px rgba(16,24,39,0.13);
+  box-shadow: 0 2px 12px rgba(16, 24, 39, 0.13);
   transition: background 0.2s, color 0.2s;
 }
-.theme-toggle:hover, .theme-toggle:focus {
+
+.theme-toggle:hover,
+.theme-toggle:focus {
   background: var(--primary);
   color: #fff;
 }
 
 /* --- RESPONSIVE --- */
 @media (max-width: 900px) {
-  html, body {
+
+  html,
+  body {
     font-size: 16px;
   }
+
   section {
     margin-bottom: 36px;
   }
-  .card, .surface {
+
+  .card,
+  .surface {
     padding: 1.2em 0.7em;
   }
 }
@@ -257,16 +347,20 @@ hr {
   h1 {
     font-size: 1.55rem;
   }
+
   h2 {
     font-size: 1.15rem;
   }
-  .card, .surface {
+
+  .card,
+  .surface {
     padding: 1em 0.3em;
   }
 }
 
 /* --- GAMEDEV/DEV THEME EXTRAS --- */
-kbd, .kbd {
+kbd,
+.kbd {
   font-family: var(--font-mono);
   background: var(--surface);
   color: var(--secondary);
@@ -274,6 +368,6 @@ kbd, .kbd {
   border-radius: 6px;
   padding: 2px 7px;
   font-size: 0.98em;
-  box-shadow: 0 1px 3px rgba(16,24,39,0.06);
+  box-shadow: 0 1px 3px rgba(16, 24, 39, 0.06);
   margin: 0 2px;
 }

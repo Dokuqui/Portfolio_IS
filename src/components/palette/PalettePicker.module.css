@@ -1,0 +1,112 @@
+.palettePickerRoot {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 12;
+}
+
+.paletteBtn {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--surface);
+    border: 1.5px solid var(--primary);
+    border-radius: 22px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--primary);
+    box-shadow: 0 2px 12px rgba(16, 24, 39, 0.13);
+    transition: background 0.2s, color 0.2s;
+}
+
+.paletteBtn:hover,
+.paletteBtn:focus {
+    background: var(--primary);
+    color: #fff;
+}
+
+.paletteBtnLabel {
+    font-size: 0.93em;
+    letter-spacing: 0.01em;
+    margin-left: 6px;
+    color: inherit;
+
+    @media (max-width: 700px) {
+        display: none;
+    }
+}
+
+.paletteTooltip {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    min-width: 160px;
+    background: var(--surface);
+    border: 1.5px solid var(--primary);
+    border-radius: 14px;
+    box-shadow: 0 6px 28px 0 rgba(16, 24, 39, 0.17);
+    padding: 10px 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    z-index: 100;
+    animation: fadeIn 0.18s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.paletteOption {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    color: var(--primary);
+    font-family: var(--font-mono);
+    font-size: 1.04em;
+    border: none;
+    border-radius: 8px;
+    padding: 7px 12px;
+    cursor: pointer;
+    transition: background 0.16s, color 0.16s;
+}
+
+.paletteOption .paletteSwatch {
+    display: inline-block;
+    width: 1.18em;
+    height: 1.18em;
+    border-radius: 50%;
+    background: var(--palette-color, #5e60ce);
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 1.2px var(--primary);
+}
+
+.paletteOption.active,
+.paletteOption:hover,
+.paletteOption:focus {
+    background: var(--primary);
+    color: #fff;
+}
+
+.paletteOption.active .paletteSwatch,
+.paletteOption:hover .paletteSwatch,
+.paletteOption:focus .paletteSwatch {
+    border-color: #fff;
+}
+
+@media (max-width: 700px) {
+    .paletteTooltip {
+        min-width: 120px;
+    }
+}
