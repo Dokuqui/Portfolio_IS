@@ -29,7 +29,7 @@ const techIcons: { [key: string]: string } = {
 };
 
 const CareerSection = () => {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     const abbreviateMonth = useAbbreviateMonth();
 
     return (
