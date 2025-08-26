@@ -39,9 +39,8 @@ const ProjectsSection = () => {
         "Find-Movie-APP_Django",
         "Semantic-release_Force-version-plugin",
         "Job_Detection",
-        "DevOps-AIRNES",
-        "DevOps-AIRNES_Mobile",
         "Hooly_Back-end",
+        "TubeLoader"
     ];
 
     useEffect(() => {
