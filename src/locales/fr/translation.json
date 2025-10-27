@@ -22,6 +22,20 @@
 
     "career.heading": "Parcours",
     "career.present": "Présent",
+    "career.SAGE.title": "Software Automation Ingenieur",
+    "career.SAGE.company": "SAGE",
+    "career.SAGE.contractType": "Alternance",
+    "career.SAGE.description": "Pipelines CI/CD automatisés, scriptés en Python, PowerShell, Groovy, les publications et les déploiements sur AWS, services conteneurisés avec Docker et Kubernetes, infrastructure gérée en tant que code avec Terraform, maintenance de bases de données MySQL, élaboration de rapports Power BI",
+    "career.SAGE.skills": [
+        "CI/CD",
+        "Reporting Power BI",
+        "Automatisation",
+        "Gestion des releases",
+        "Scripting",
+        "Développement logiciel",
+        "Bases de données",
+        "Déploiement"
+    ],
     "career.ACC.title": "Développeur Full Stack",
     "career.ACC.company": "ACC - Automotive Cells Company",
     "career.ACC.contractType": "Alternance",
@@ -74,7 +88,7 @@
     "education.heading": "Éducation",
     "education.level": "Niveau",
     "education.supdevinci.institution": "Sup de Vinci - École d'Informatique",
-    "education.supdevinci.degree": "Mastère Développement Full Stack (M1-M2)",
+    "education.supdevinci.degree": "Mastère Développement Full Stack (BAC +5)",
     "education.supdevinci.title": "Développeur Full-stack",
     "education.supdevinci.period": "2024 - 2026",
     "education.supdevinci.competences": [
@@ -101,7 +115,7 @@
         "Figma"
     ],
     "education.junia.institution": "JUNIA XP",
-    "education.junia.degree": "Bachelor Administrateur des Systèmes d’Information (BAC+3)",
+    "education.junia.degree": "Bachelor Administrateur des Systèmes d’Information (BAC +3)",
     "education.junia.title": "DevOps",
     "education.junia.period": "2023 - 2024",
     "education.junia.level": "14,38",
@@ -127,7 +141,7 @@
         "React Native"
     ],
     "education.bordeaux.institution": "Université de Bordeaux",
-    "education.bordeaux.degree": "Science pour l’Ingénieur",
+    "education.bordeaux.degree": "Science pour l’Ingénieur (L1)",
     "education.bordeaux.title": "Ingénieur IoT et Systèmes Embarqués",
     "education.bordeaux.period": "2022 - 2023",
     "education.bordeaux.competences": [
@@ -137,7 +151,7 @@
         "Électronique"
     ],
     "education.odessauniv.institution": "Odesa National Maritime University",
-    "education.odessauniv.degree": "Bachelor (BAC+3)",
+    "education.odessauniv.degree": "Bachelor (BAC +3)",
     "education.odessauniv.title": "Navigation au Bateau",
     "education.odessauniv.period": "2019 - 2022",
     "education.odessauniv.competences": [],

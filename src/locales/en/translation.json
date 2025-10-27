@@ -22,9 +22,23 @@
 
     "career.heading": "Career",
     "career.present": "Present",
+    "career.SAGE.title": "Software Automation Engineer",
+    "career.SAGE.company": "SAGE",
+    "career.SAGE.contractType": "Apprenti",
+    "career.SAGE.description": "Automated CI/CD pipelines, scripting with Python, Powershell, Groovy, streamline releases and deployments to AWS, containerized services with Docker and Kubernetes, managed infrastructure as code with Terraform, maintained MySQL databases, delivered Power BI reports",
+    "career.SAGE.skills": [
+        "CI/CD",
+        "Power BI Reporting",
+        "Automation",
+        "Releases",
+        "Scripting",
+        "Software Dev",
+        "Database",
+        "Deploy"
+    ],
     "career.ACC.title": "Full Stack Developer",
     "career.ACC.company": "ACC - Automotive Cells Company",
-    "career.ACC.contractType": "Work-study",
+    "career.ACC.contractType": "Apprenti",
     "career.ACC.description": "Developed front/back with React, Next.js, Node.js, FastAPI; managed GraphQL microservices; optimized CI/CD on Azure DevOps; delivered quality with Jest and PostgreSQL.",
     "career.ACC.skills": [
         "Microservices",
@@ -38,7 +52,7 @@
     ],
     "career.HORNET.title": "QA Engineer",
     "career.HORNET.company": "Hornetsecurity (Formerly Vade)",
-    "career.HORNET.contractType": "Work-study",
+    "career.HORNET.contractType": "Apprenti",
     "career.HORNET.description": "Tested e2e with Cypress, APIs with Postman, integrated CI on GitLab, implemented Semantic Release, developed TypeScript/Node.js endpoints and Go script for CI cleanup.",
     "career.HORNET.skills": [
         "CI/CD",
@@ -74,7 +88,7 @@
     "education.heading": "Education",
     "education.level": "Level",
     "education.supdevinci.institution": "Sup de Vinci - School of Computer Science",
-    "education.supdevinci.degree": "Master's in Full Stack Development (M1-M2)",
+    "education.supdevinci.degree": "Master's in Full Stack Development (BAC +5)",
     "education.supdevinci.title": "Full-stack Developer",
     "education.supdevinci.period": "2024 - 2026",
     "education.supdevinci.competences": [
@@ -101,7 +115,7 @@
         "Figma"
     ],
     "education.junia.institution": "JUNIA XP",
-    "education.junia.degree": "Bachelor of Information Systems Administration (BAC+3)",
+    "education.junia.degree": "Bachelor of Information Systems Administration (BAC +3)",
     "education.junia.title": "DevOps",
     "education.junia.period": "2023 - 2024",
     "education.junia.level": "14.38",
@@ -127,7 +141,7 @@
         "React Native"
     ],
     "education.bordeaux.institution": "University of Bordeaux",
-    "education.bordeaux.degree": "Engineering Science",
+    "education.bordeaux.degree": "Engineering Science (L1)",
     "education.bordeaux.title": "IoT and Embedded Systems Engineer",
     "education.bordeaux.period": "2022 - 2023",
     "education.bordeaux.competences": [
@@ -137,7 +151,7 @@
         "Electronics"
     ],
     "education.odessauniv.institution": "Odesa National Maritime University",
-    "education.odessauniv.degree": "Bachelor (BAC+3)",
+    "education.odessauniv.degree": "Bachelor (BAC +3)",
     "education.odessauniv.title": "Boat Navigation",
     "education.odessauniv.period": "2019 - 2022",
     "education.odessauniv.competences": [],

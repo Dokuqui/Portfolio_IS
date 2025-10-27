@@ -28,6 +28,9 @@ const techIcons: { [key: string]: string } = {
     Go: "logos:go",
     C: "logos:c",
     Gitlab: "logos:gitlab",
+    PowerShell: "simple-icons:powershell",
+    Powershell: "simple-icons:powershell",
+    Groovy: "simple-icons:apachegroovy",
 };
 
 const ProjectsSection = () => {
@@ -40,7 +43,9 @@ const ProjectsSection = () => {
         "Semantic-release_Force-version-plugin",
         "Job_Detection",
         "Hooly_Back-end",
-        "TubeLoader"
+        "TubeLoader",
+        "Finet",
+        "AutoDS"
     ];
 
     useEffect(() => {

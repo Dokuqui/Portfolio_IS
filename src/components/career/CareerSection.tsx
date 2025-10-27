@@ -13,9 +13,9 @@ const techIcons: { [key: string]: string } = {
     "FastAPI": "logos:fastapi",
     "Next.js": "logos:nextjs-icon",
     "PostgreSQL": "logos:postgresql",
-    "Knex": "simple-icons:knexjs",
+    "Knex": "simple-icons:knexdotjs",
     "Jest": "logos:jest",
-    "Azure DevOps": "logos:azure-devops",
+    "Azure DevOps": "logos:azure",
     "Cypress": "skill-icons:cypress-light",
     "Golang": "logos:go",
     "Postman": "logos:postman-icon",
@@ -26,6 +26,19 @@ const techIcons: { [key: string]: string } = {
     "Linux": "logos:linux",
     "Express": "simple-icons:express",
     "GraphQL": "logos:graphql",
+    "Microsoft Power BI": "simple-icons:powerbi",
+    "Kubernetes": "logos:kubernetes",
+    "Terraform": "logos:terraform-icon",
+    "PowerShell": "simple-icons:powershell",
+    "Powershell": "simple-icons:powershell",
+    "Groovy": "simple-icons:apachegroovy",
+    "MySQL": "logos:mysql",
+    "Jira": "logos:jira",
+    "JIRA": "logos:jira",
+    "Jenkins": "logos:jenkins",
+    "GitHub Actions": "logos:github-actions",
+    "Github Actions": "logos:github-actions",
+    "AWS": "logos:aws"
 };
 
 const CareerSection = () => {
