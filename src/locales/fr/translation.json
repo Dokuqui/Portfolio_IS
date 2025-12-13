@@ -25,7 +25,7 @@
     "career.SAGE.title": "Software Automation Ingenieur",
     "career.SAGE.company": "SAGE",
     "career.SAGE.contractType": "Alternance",
-    "career.SAGE.description": "Pipelines CI/CD automatisés, scriptés en Python, PowerShell, Groovy, les publications et les déploiements sur AWS, services conteneurisés avec Docker et Kubernetes, infrastructure gérée en tant que code avec Terraform, maintenance de bases de données MySQL, élaboration de rapports Power BI",
+    "career.SAGE.description": "Pipelines CI/CD automatisés, scriptés en Python, PowerShell, Groovy, Go, les publications et les déploiements sur AWS, services conteneurisés avec Docker et Kubernetes, infrastructure gérée en tant que code avec Terraform, maintenance de bases de données MySQL, élaboration de rapports Power BI",
     "career.SAGE.skills": [
         "CI/CD",
         "Reporting Power BI",

@@ -25,7 +25,7 @@
     "career.SAGE.title": "Software Automation Engineer",
     "career.SAGE.company": "SAGE",
     "career.SAGE.contractType": "Apprenti",
-    "career.SAGE.description": "Automated CI/CD pipelines, scripting with Python, Powershell, Groovy, streamline releases and deployments to AWS, containerized services with Docker and Kubernetes, managed infrastructure as code with Terraform, maintained MySQL databases, delivered Power BI reports",
+    "career.SAGE.description": "Automated CI/CD pipelines, scripting with Python, Powershell, Groovy, Go, streamline releases and deployments to AWS, containerized services with Docker and Kubernetes, managed infrastructure as code with Terraform, maintained MySQL databases, delivered Power BI reports",
     "career.SAGE.skills": [
         "CI/CD",
         "Power BI Reporting",

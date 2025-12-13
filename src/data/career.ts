@@ -5,7 +5,7 @@ export const careerMilestones = [
         from: "September 2025",
         till: "Now",
         key: "SAGE",
-        technologies: ["Python", "Microsoft Power BI", "Docker", "Kubernetes", "Terraform", "Powershell", "Groovy", "MySQL", "JIRA", "Jenkins", "Azure DevOps", "Github Actions", "AWS"]
+        technologies: ["Python", "Microsoft Power BI", "Docker", "Kubernetes", "Terraform", "Powershell", "Groovy", "Golang", "MySQL", "JIRA", "Jenkins", "Azure DevOps", "Github Actions", "AWS"]
     },
     {
         from: "September 2024",

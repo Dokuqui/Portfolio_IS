@@ -27,6 +27,8 @@ const techIcons: { [key: string]: string } = {
     "Semantic Release": "simple-icons:semanticrelease",
     Go: "logos:go",
     C: "logos:c",
+    "C#": "devicon:csharp",
+    TypeScript: "logos:typescript-icon",
     Gitlab: "logos:gitlab",
     PowerShell: "simple-icons:powershell",
     Powershell: "simple-icons:powershell",
@@ -45,7 +47,9 @@ const ProjectsSection = () => {
         "Hooly_Back-end",
         "TubeLoader",
         "Finet",
-        "AutoDS"
+        "AutoDS",
+        "GAC-Bot",
+        "DevStation"
     ];
 
     useEffect(() => {
