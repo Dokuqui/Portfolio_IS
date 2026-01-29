@@ -45,11 +45,11 @@ const ProjectsSection = () => {
         "Semantic-release_Force-version-plugin",
         "Job_Detection",
         "Hooly_Back-end",
-        "TubeLoader",
         "Finet",
         "AutoDS",
         "GAC-Bot",
-        "DevStation"
+        "DevStation",
+        "arena-matchmaker"
     ];
 
     useEffect(() => {
