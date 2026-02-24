@@ -44,12 +44,11 @@ const ProjectsSection = () => {
         "Find-Movie-APP_Django",
         "Semantic-release_Force-version-plugin",
         "Job_Detection",
-        "Hooly_Back-end",
-        "Finet",
         "AutoDS",
         "GAC-Bot",
         "DevStation",
-        "arena-matchmaker"
+        "arena-matchmaker",
+        "metriccull"
     ];
 
     useEffect(() => {
