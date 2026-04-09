@@ -66,7 +66,17 @@ const AboutSection = () => {
             >
                 <div className={styles.heroRow}>
                     <div className={styles.heroVisual}>
-                        <Lottie animationData={heroAnimation} loop={true} style={{ width: "100%", height: "100%" }} />
+                        {/* Profile Photo Container */}
+                        <div className={styles.photoFrame}>
+                            <img
+                                src="/image/Profile.jpg"
+                                alt="Semenov Illia"
+                                className={styles.profilePhoto}
+                            />
+                            <div className={styles.lottieOverlay}>
+                                <Lottie animationData={heroAnimation} loop={true} />
+                            </div>
+                        </div>
                     </div>
                     <div className={styles.heroIntro}>
                         <h2 className={styles.heading}>{t("about.heading")}</h2>

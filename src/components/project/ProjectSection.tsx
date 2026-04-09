@@ -42,13 +42,13 @@ const ProjectsSection = () => {
     const desiredRepos = [
         "LanguageRevamp",
         "Find-Movie-APP_Django",
-        "Semantic-release_Force-version-plugin",
         "Job_Detection",
         "AutoDS",
         "GAC-Bot",
         "DevStation",
         "arena-matchmaker",
-        "metriccull"
+        "metriccull",
+        "postula"
     ];
 
     useEffect(() => {

@@ -4,22 +4,17 @@
     "nav.projects": "Projects",
     "nav.career": "Career",
     "nav.education": "Education",
-
     "footer.copyright": "© {{year}} SEMENOV_OS",
     "footer.made": "Made with <1>💙</1> by Dokuqui",
-
     "about.heading": "ABOUT",
-    "about.description": "As a passionate developer, I aspire to grow as a Software Developer or DevOps Engineer. With strong experience in Go (Golang), TypeScript, Python, and C#, I excel at building robust, scalable, and automated software solutions.<br /><br />My journey spans diverse industries — logistics, navigation, cybersecurity, and technology — where I&apos;ve honed my expertise in microservices, CI/CD pipelines, database management, and process automation.<br /><br />Driven by curiosity and a relentless desire to learn, I&apos;m particularly interested in automation and workflow optimization. I enjoy contributing to open-source projects, exploring new technologies, and pushing the boundaries of what software development and DevOps engineering can achieve.<br />",
+    "about.description": "I am a Full-Stack Developer and Software Automation Engineer dedicated to building high-performance, scalable solutions that solve real-world problems. My journey is unique: I began in Marine Navigation and Logistics, where I learned the value of precision and operational reliability in high-stakes environments. Today, I apply that same &apos;mission-critical&apos; mindset to software engineering and DevOps best practices.\n\nI specialize in the Go, Python, and Node.js ecosystems, with a deep focus on cloud-native architectures (AWS/Azure) and CI/CD orchestration. My work isn&apos;t just about writing code, it&apos;s about driving efficiency. I have a proven track record of reducing manual processing times by 60% and increasing deployment efficiency by 30% through strategic automation.\n\nWhen I&apos;m not optimizing pipelines or resolving the occasional 150+ bugs before production, you&apos;ll find me exploring the Rust ecosystem or contributing to open-source projects. I thrive on curiosity and I&apos;m always ready to push the boundaries of what&apos;s possible in modern tech.",
     "about.buttonText": "Let's connect and build something amazing together!",
-    "about.cvLink": "/documents/Semenov Illia Software CV.pdf",
-    "about.cvFileName": "Semenov Illia Software CV.pdf",
+    "about.cvLink": "/documents/Semenov Illia - Software Dev.pdf",
+    "about.cvFileName": "Semenov Illia - Software Dev.pdf",
     "about.copyEmail": "Copy Email",
     "about.copied": "Copied!",
-
     "skills.heading": "Skillset",
-
     "projects.heading": "Projects",
-
     "career.heading": "Career",
     "career.present": "Present",
     "career.SAGE.title": "Software Automation Engineer",
@@ -62,14 +57,13 @@
     "career.BAR.title": "Bartender",
     "career.BAR.company": "Magnus&Minus",
     "career.BAR.contractType": "Permanent",
-    "career.BAR.description": "",
+    "career.BAR.description": "Demonstrated excellent stress management and customer service skills",
     "career.BAR.skills": "",
     "career.VGROUP.title": "Assistant Captain",
     "career.VGROUP.company": "V.Group",
     "career.VGROUP.contractType": "Fixed-term",
     "career.VGROUP.description": "Sailed in 20+ countries, managed navigation/crew, supervised loading, developed skills in maritime regulations and emergency management.",
     "career.VGROUP.skills": "",
-
     "months": {
         "January": "Jan",
         "February": "Feb",
@@ -84,7 +78,6 @@
         "November": "Nov",
         "December": "Dec"
     },
-    
     "education.heading": "Education",
     "education.level": "Level",
     "education.supdevinci.institution": "Sup de Vinci - School of Computer Science",

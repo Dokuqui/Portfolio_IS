@@ -37,9 +37,15 @@ export const skills = [
     category: "Languages",
   },
   {
-    name: "Dart",
-    icon: "skill-icons:dart-dark",
-    code: `print('Hello World');`,
+    name: "Bash",
+    icon: "skill-icons:bash-dark",
+    code: `echo "Hello"`,
+    category: "Languages",
+  },
+  {
+    name: "PowerShell",
+    icon: "skill-icons:powershell-dark",
+    code: `Write-Host "Hello"`,
     category: "Languages",
   },
   {
@@ -162,43 +168,79 @@ export const skills = [
     code: `app:=fiber.New(); app.Get("/", ...)`,
     category: "Backend",
   },
+  {
+    name: "gRPC",
+    icon: "logos:grpc",
+    code: `rpc SayHello (HelloReq) returns (HelloReply);`,
+    category: "Backend",
+  },
 
-  // 🗃️ Databases
+  // 🗃️ Databases & Data Engineering
   {
     name: "MongoDB",
     icon: "skill-icons:mongodb",
     code: `db.collection.insertOne({msg:'Hello'})`,
-    category: "Databases",
+    category: "Databases & Data Engineering",
   },
   {
     name: "PostgreSQL",
     icon: "skill-icons:postgresql-dark",
     code: `SELECT 'Hello' AS message;`,
-    category: "Databases",
+    category: "Databases & Data Engineering",
   },
   {
     name: "MySQL",
     icon: "skill-icons:mysql-dark",
     code: `SELECT 'Hello' AS greeting;`,
-    category: "Databases",
+    category: "Databases & Data Engineering",
   },
   {
     name: "SQLite",
     icon: "skill-icons:sqlite",
     code: `SELECT 'Hello' AS msg;`,
-    category: "Databases",
+    category: "Databases & Data Engineering",
   },
   {
     name: "MariaDB",
     icon: "logos:mariadb",
     code: `SELECT 'Hello' AS msg;`,
-    category: "Databases",
+    category: "Databases & Data Engineering",
   },
   {
     name: "Prisma",
     icon: "skill-icons:prisma",
     code: `const users=await prisma.user.findMany()`,
-    category: "Databases",
+    category: "Databases & Data Engineering",
+  },
+  {
+    name: "Snowflake",
+    icon: "simple-icons:snowflake",
+    code: `SELECT * FROM table SAMPLE (10);`,
+    category: "Databases & Data Engineering",
+  },
+  {
+    name: "Spark",
+    icon: "simple-icons:apachespark",
+    code: `df.select("name").filter(df.age > 21)`,
+    category: "Databases & Data Engineering",
+  },
+  {
+    name: "Airflow",
+    icon: "logos:airflow",
+    code: `dag = DAG('etl_job', schedule='@daily')`,
+    category: "Databases & Data Engineering",
+  },
+  {
+    name: "Kafka",
+    icon: "simple-icons:apachekafka",
+    code: `producer.send('topic', b'Hello Kafka')`,
+    category: "Databases & Data Engineering",
+  },
+  {
+    name: "dbt",
+    icon: "logos:dbt",
+    code: `select * from {{ ref('stg_users') }}`,
+    category: "Databases & Data Engineering",
   },
 
   // ☁️ Cloud
@@ -227,9 +269,9 @@ export const skills = [
     category: "Cloud",
   },
   {
-    name: "DigitalOcean",
-    icon: "simple-icons:digitalocean",
-    code: `doctl compute droplet list`,
+    name: "OVH",
+    icon: "simple-icons:ovh",
+    code: `ovh-cli /cloud/project/{serviceName}/instance`,
     category: "Cloud",
   },
 
@@ -298,18 +340,6 @@ export const skills = [
     name: "Linux",
     icon: "skill-icons:linux-dark",
     code: `sudo apt update`,
-    category: "DevOps & CI/CD",
-  },
-  {
-    name: "Bash",
-    icon: "skill-icons:bash-dark",
-    code: `echo "Hello"`,
-    category: "DevOps & CI/CD",
-  },
-  {
-    name: "PowerShell",
-    icon: "skill-icons:powershell-dark",
-    code: `Write-Host "Hello"`,
     category: "DevOps & CI/CD",
   },
 
