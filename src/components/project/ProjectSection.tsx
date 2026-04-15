@@ -43,7 +43,7 @@ const ProjectsSection = () => {
         "LanguageRevamp",
         "Find-Movie-APP_Django",
         "Job_Detection",
-        "AutoDS",
+        "AtlasFlowData",
         "GAC-Bot",
         "DevStation",
         "arena-matchmaker",
